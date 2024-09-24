@@ -1,0 +1,49 @@
+{
+    "name": "thomasmarinissen/class-dependency-resolver",
+    "description": "A Class Dependency Resolver for PHP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thomas Marinissen"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "nikic/php-parser": "^5.2"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.17",
+        "nunomaduro/collision": "^8.4",
+        "phpstan/phpstan": "^1.12",
+        "mockery/mockery": "^1.6",
+        "phpunit/phpunit": "^11.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Thomasmarinissen\\ClassDependencyResolver\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": false
+        }
+    },
+    "scripts": {
+        "lint": "pint -v",
+        "test:lint": "pint --test -v",
+        "test:types": "phpstan analyse --ansi",
+        "test:unit": "phpunit --colors=always",
+        "test": [
+            "@test:lint",
+            "@test:types",
+            "@test:unit"
+        ]
+    }
+}
