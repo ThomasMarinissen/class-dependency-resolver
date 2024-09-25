@@ -177,6 +177,29 @@ class Resolver
     }
 
     /**
+     * Get the fully qualified name for a given file path.
+     *
+     * @param  string  $filePath  The file path to retrieve the name for.
+     * @return string|null The fully qualified name if found, or null otherwise.
+     */
+    public function nameByFilePath(string $filePath): ?string
+    {
+        // Normalize the file path to ensure consistency.
+        $filePath = $this->fileScanner()
+            ->filePath()
+            ->normalizePath($filePath);
+
+        // Get the name to file map.
+        $nameToFileMap = $this->allMappedNames();
+
+        // Use array_search to find the name by file path.
+        $name = array_search($filePath, $nameToFileMap);
+
+        // Return the name if found, otherwise null.
+        return $name !== false ? $name : null;
+    }
+
+    /**
      * Get the direct dependencies for a given file path.
      *
      * @param  string  $filePath  The file path to retrieve dependencies for.
