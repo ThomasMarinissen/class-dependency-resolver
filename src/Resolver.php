@@ -8,6 +8,8 @@ use PhpParser\NodeTraverser;
 use PhpParser\Parser;
 use PhpParser\ParserFactory as PhpParserFactory;
 use PhpParser\PhpVersion;
+use Thomasmarinissen\ClassDependencyResolver\Resolve\DependencyExtractor;
+use Thomasmarinissen\ClassDependencyResolver\Resolve\FileScanner;
 
 /**
  * Class Resolver

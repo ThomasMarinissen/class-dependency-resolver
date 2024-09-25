@@ -6,7 +6,7 @@ use PhpParser\Lexer;
 use PhpParser\NodeTraverser;
 use PhpParser\Parser\Php7;
 use PHPUnit\Framework\TestCase;
-use Thomasmarinissen\ClassDependencyResolver\DependencyExtractor;
+use Thomasmarinissen\ClassDependencyResolver\Resolve\DependencyExtractor;
 
 /**
  * Class DependencyExtractorTest

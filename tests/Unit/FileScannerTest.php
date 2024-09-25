@@ -7,7 +7,7 @@ use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
 use SplFileInfo;
-use Thomasmarinissen\ClassDependencyResolver\FileScanner;
+use Thomasmarinissen\ClassDependencyResolver\Resolve\FileScanner;
 
 class FileScannerTest extends TestCase
 {
