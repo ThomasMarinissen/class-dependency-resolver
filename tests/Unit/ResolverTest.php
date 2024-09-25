@@ -90,6 +90,33 @@ class ResolverTest extends TestCase
         $this->assertNull($filePath);
     }
 
+    public function test_user_gets_class_name_by_file_path()
+    {
+        // Create a new instance of the Resolver with the test directory
+        $resolver = new Resolver([$this->testDir]);
+
+        // Retrieve the class name for the file ClassA.php
+        $className = $resolver->nameByFilePath($this->testDir . '/ClassA.php');
+
+        // Define the expected class name
+        $expectedName = 'TestNamespace\ClassA';
+
+        // Assert that the retrieved class name matches the expected name
+        $this->assertEquals($expectedName, $className);
+    }
+
+    public function test_user_gets_null_for_nonexistent_file_path()
+    {
+        // Create a new instance of the Resolver with the test directory
+        $resolver = new Resolver([$this->testDir]);
+
+        // Try to retrieve the class name for a non-existent file
+        $className = $resolver->nameByFilePath('NonExistentFile.php');
+
+        // Assert that the class name is null
+        $this->assertNull($className);
+    }
+
     public function test_user_gets_empty_dependencies_for_nonexistent_class_name()
     {
         // Create a new instance of the Resolver with the test directory
