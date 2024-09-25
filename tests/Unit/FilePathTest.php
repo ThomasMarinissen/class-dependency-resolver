@@ -4,7 +4,7 @@ namespace Tests\Unit;
 
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
-use Thomasmarinissen\ClassDependencyResolver\FilePath;
+use Thomasmarinissen\ClassDependencyResolver\Resolve\FilePath;
 
 class FilePathTest extends TestCase
 {

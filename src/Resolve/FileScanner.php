@@ -1,6 +1,6 @@
 <?php
 
-namespace Thomasmarinissen\ClassDependencyResolver;
+namespace Thomasmarinissen\ClassDependencyResolver\Resolve;
 
 use Exception;
 use FilesystemIterator;

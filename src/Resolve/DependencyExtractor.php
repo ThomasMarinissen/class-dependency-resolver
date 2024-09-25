@@ -1,6 +1,6 @@
 <?php
 
-namespace Thomasmarinissen\ClassDependencyResolver;
+namespace Thomasmarinissen\ClassDependencyResolver\Resolve;
 
 use PhpParser\Node;
 use PhpParser\Node\Expr\Assign;
