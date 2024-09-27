@@ -30,11 +30,6 @@
         }
     },
     "minimum-stability": "stable",
-    "config": {
-        "allow-plugins": {
-            "pestphp/pest-plugin": false
-        }
-    },
     "scripts": {
         "lint": "pint -v",
         "test:lint": "pint --test -v",
